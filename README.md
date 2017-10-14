@@ -19,6 +19,7 @@ For this project, a great writeup should provide a detailed response to the "Ref
 
 1. Describe the pipeline
 
+
 2. Identify any shortcomings
 
 3. Suggest possible improvements
@@ -34,15 +35,72 @@ The Project
 
 **Step 1:** Set up the [CarND Term1 Starter Kit](https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/83ec35ee-1e02-48a5-bdb7-d244bd47c2dc/lessons/8c82408b-a217-4d09-b81d-1bda4c6380ef/concepts/4f1870e0-3849-43e4-b670-12e6f2d4b7a7).
 
+In this project you will detect lane lines in images using Python and OpenCV. OpenCV means "Open-Source Computer Vision", which is a package that has many useful tools for analyzing images.
+
+Creating the environment with Anaconda
+
+To do this project, you will need Python 3 along with the numpy, matplotlib, and OpenCV libraries, as well as Jupyter Notebook installed.
+
+We recommend downloading and installing the Anaconda Python 3 distribution from Continuum Analytics because it comes prepackaged with many of the Python dependencies you will need for this and future projects, makes it easy to install OpenCV, and includes Jupyter Notebook. Beyond that, it is one of the most common Python distributions used in data analytics and machine learning, so a great choice if you're getting started in the field.
+
+Choose the appropriate Python 3 Anaconda install package for your operating system here. Download and install the package.
+
+If you already have Anaconda for Python 2 installed, you can create a separate environment for Python 3 and all the appropriate dependencies with the following command:
+
+> conda create --name=yourNewEnvironment python=3 anaconda
+
+> source activate yourNewEnvironment
+
+Installing OpenCV
+
+Once you have Anaconda installed, first double check you are in your Python 3 environment:
+
+>python
+Python 3.5.2 |Anaconda 4.1.1 (x86_64)| (default, Jul 2 2016, 17:52:12)
+[GCC 4.2.1 Compatible Apple LLVM 4.2 (clang-425.0.28)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+(Ctrl-d to exit Python)
+
+run the following commands at the terminal prompt to get OpenCV:
+
+> pip install pillow
+> conda install -c https://conda.anaconda.org/menpo opencv3
+
+then to test if OpenCV is installed correctly:
+
+> python
+>>> import cv2
+>>>
+(Ctrl-d to exit Python)
+
+Step 3: Installing moviepy
+
+We recommend the "moviepy" package for processing video in this project (though you're welcome to use other packages if you prefer).
+
+To install moviepy run:
+
+>pip install moviepy
+
+and check that the install worked:
+
+>python
+>>>import moviepy
+>>>
+(Ctrl-d to exit Python)
+
+
 **Step 2:** Open the code in a Jupyter Notebook
 
 You will complete the project code in a Jupyter notebook.  If you are unfamiliar with Jupyter Notebooks, check out <A HREF="https://www.packtpub.com/books/content/basics-jupyter-notebook-and-python" target="_blank">Cyrille Rossant's Basics of Jupyter Notebook and Python</A> to get started.
 
-Jupyter is an Ipython notebook where you can run blocks of code and see results interactively.  All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, use terminal to navigate to your project directory and then run the following command at the terminal prompt (be sure you've activated your Python 3 carnd-term1 environment as described in the [CarND Term1 Starter Kit](https://github.com/udacity/CarND-Term1-Starter-Kit/blob/master/README.md) installation instructions!):
+This project is completed in a Jupyter notebook. If you are unfamiliar with Jupyter Notebooks, check out Cyrille Rossant's Basics of Jupyter Notebook and Python to get started.
 
-`> jupyter notebook`
+Jupyter is an ipython notebook where you can run blocks of code and see results interactively. All the code for this project is contained in a Jupyter notebook. To start Jupyter in your browser, run the following command at the terminal prompt (be sure you're in your Python 3 environment!):
 
-A browser window will appear showing the contents of the current directory.  Click on the file called "P1.ipynb".  Another browser window will appear displaying the notebook.  Follow the instructions in the notebook to complete the project.  
+> jupyter notebook
+
+A browser window will appear showing the contents of the current directory. Click on the file called "P1.ipynb".  
 
 **Step 3:** Complete the project and submit both the Ipython notebook and the project writeup
 
