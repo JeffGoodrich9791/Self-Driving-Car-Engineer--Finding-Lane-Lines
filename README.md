@@ -13,9 +13,8 @@ In this project you will detect lane lines in images using Python and OpenCV.  O
 To complete the project, two files will be submitted: a file containing project code and a file containing a brief write up explaining your solution. 
 
 
-Creating a Great Writeup
+Project Writeup
 ---
-For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
 
 1. Describe the pipeline
 The pipeline was built using the following code: 
