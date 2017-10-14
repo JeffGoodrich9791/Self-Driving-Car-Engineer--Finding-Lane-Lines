@@ -18,15 +18,33 @@ Creating a Great Writeup
 For this project, a great writeup should provide a detailed response to the "Reflection" section of the [project rubric](https://review.udacity.com/#!/rubrics/322/view). There are three parts to the reflection:
 
 1. Describe the pipeline
+The pipeline was built using the following code: 
 
-
+def process_image(img):
+   
+        imshape = img.shape
+        gray = grayscale(img)
+        blur_gray = gaussian_blur(img, 3)
+        edges = canny(blur_gray, 100, 150)
+        
+        
+        vertices = np.array([[(0,imshape[0]),(465, 320), (475, 320), (imshape[1],imshape[0])]], dtype=np.int32)
+        masked_region = region_of_interest(edges, vertices)
+        
+        lines_image = hough_lines(masked_region, 2, np.pi/180, 15, 25, 2)
+        
+        result = weighted_img(lines,img,a=0.8, B=1.0)
+        
+        return result
+        
 2. Identify any shortcomings
+
+The initial code ran I ran with defining the area of interest or "masked_region" in the code used a weighted function of the x1, x2, y1, y2, m1, and m2 to determine the vertices. I found this code to sometimes grab the background in part of the vertices and caused the lines to temporarily sway from the actual lines on the road and cross paths. 
 
 3. Suggest possible improvements
 
-We encourage using images in your writeup to demonstrate how your pipeline works.  
+I fixed this issue by using the np.array function in the "def process_image(img)" pipeline with actual coordinates for the x1,x2, y1, y2 lines as used in the first example of the course!  
 
-All that said, please be concise!  We're not looking for you to write a book here: just a brief description.
 
 The Project
 ---
