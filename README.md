@@ -16,8 +16,7 @@ To complete the project, two files will be submitted: a file containing project 
 Project Writeup
 ---
 
-1. Describe the pipeline
-The pipeline was built using the following code: 
+1. The pipeline was built using the following code: 
 
 def process_image(img):
    
